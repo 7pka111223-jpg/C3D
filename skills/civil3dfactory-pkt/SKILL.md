@@ -61,6 +61,7 @@ create_corridor                                                           offset
 `examples/pkt/02-two-design-lines.json` runs the whole chain on the demo (assembly `C3DF-TwoLines`, corridor `C1_TwoLines`, 23 sections,
 cut about 54,500 m3). Order matters: the MarkPoint must come before the LinkToMarkedPoint that names it. Stock parameters are set by
 their catalog names (`PointName`, `MarkedPointName`, `SurfaceCodes`); the result echoes them under their resource ids.
+Why the link comes out empty, why it has no label, and why two codes print two labels: `docs/markpoint.md`.
 
 ## Example task
 

@@ -58,13 +58,16 @@ Read https://github.com/7pka111223-jpg/C3D/blob/HEAD/SKILL.md and set it up.
 ## For humans - three steps
 
 1. Install Civil 3D 2022-2027 (2025 / 2026 tested by the author; 2027 and 2022-2024 compile against their SDKs and wait for community testing).
-2. Download the latest release zip and unzip it, or `git clone` this repository.
-3. Run `powershell -ExecutionPolicy Bypass -File install.ps1` - it detects Civil 3D, installs the engine bundle (downloads the prebuilt one), fetches the two exe tools, installs the skills into your AI agents' skill folders and runs a read-only self-check. Restart Civil 3D once if it was open.
+2. Install the [.NET 8 SDK](https://dotnet.microsoft.com/download) (add the .NET 10 SDK for Civil 3D 2027), `git clone https://github.com/7pka111223-jpg/C3D.git civil3dfactory`,
+   and run `powershell -ExecutionPolicy Bypass -File civil3dfactory\install.ps1 -Build`. This repository publishes no release yet, so `-Build` compiles the engine
+   from this source instead of downloading a prebuilt one; it then installs the skills into your AI agents' skill folders and runs a read-only self-check.
+   The two exe tools (`DWGAttributeEditor.exe`, `DWGTitleblockPlotter.exe`) are not built by `-Build`: add `-BuildTools` (needs Python 3.10+) if you need the plot skill.
+3. Restart Civil 3D once if it was open.
 
 ## Requirements
 
-Windows x64 and Civil 3D 2022-2027. Nothing else: no Python, no .NET SDK, no AutoCAD settings changed
-(the engine is loaded from the standard `ApplicationPlugins` bundle folder).
+Windows x64, Civil 3D 2022-2027 and the .NET 8 SDK (plus the .NET 10 SDK for 2027) to build the engine; Python 3.10+ only for `-BuildTools`.
+No AutoCAD settings are changed (the engine is loaded from the standard `ApplicationPlugins` bundle folder).
 
 | Civil 3D | Engine | Status |
 |---|---|---|

@@ -52,7 +52,7 @@ to plain-CAD sheets (layouts, viewports, export) stays a manual step in this ver
 ## For AI agents - one line
 
 ```
-Read https://github.com/hellojessieluo-svg/civil3dfactory/blob/main/SKILL.md and set it up.
+Read https://github.com/7pka111223-jpg/C3D/blob/HEAD/SKILL.md and set it up.
 ```
 
 ## For humans - three steps

@@ -14,11 +14,14 @@ If `{{C3DF_ROOT}}\civil3dfactory.ps1` does not exist:
 
 ```powershell
 git clone https://github.com/7pka111223-jpg/C3D.git civil3dfactory
-powershell -ExecutionPolicy Bypass -File civil3dfactory\install.ps1
+powershell -ExecutionPolicy Bypass -File civil3dfactory\install.ps1 -Build
 ```
 
-`install.ps1` detects Civil 3D 2022-2027, installs the prebuilt engine bundle (downloaded from the release), fetches the two exe tools, installs this skill and the four specialised skills into the agent skill folders, and runs a read-only self-check on `examples\channel-demo.dwg`.
-Restart Civil 3D once if it was open. The only thing that can be missing is Civil 3D itself.
+`install.ps1 -Build` detects Civil 3D 2022-2027, compiles the engine from this source (the repository publishes no release yet, so there is no prebuilt bundle to download),
+installs this skill and the four specialised skills into the agent skill folders, and runs a read-only self-check on `examples\channel-demo.dwg`.
+It needs the .NET 8 SDK (and the .NET 10 SDK for Civil 3D 2027); without it the install stops, so ask the user to install it rather than working around it.
+The exe tools are not built by `-Build`: add `-BuildTools` when the task needs `PktForge.exe` (pkt skill, .NET SDK) or `DWGAttributeEditor.exe` / `DWGTitleblockPlotter.exe` (plot skill, Python 3.10+).
+Restart Civil 3D once if it was open.
 
 ## Strategy
 

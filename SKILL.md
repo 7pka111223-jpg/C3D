@@ -13,7 +13,7 @@ A task JSON goes in, a result JSON comes out; accoreconsole (Civil 3D's headless
 If `{{C3DF_ROOT}}\civil3dfactory.ps1` does not exist:
 
 ```powershell
-git clone https://github.com/hellojessieluo-svg/civil3dfactory.git
+git clone https://github.com/7pka111223-jpg/C3D.git civil3dfactory
 powershell -ExecutionPolicy Bypass -File civil3dfactory\install.ps1
 ```
 

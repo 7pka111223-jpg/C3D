@@ -19,7 +19,7 @@ param(
   [switch]$SkipSkills,
   [switch]$SkipCheck,
   [string[]]$Agents,
-  [string]$Repo = "hellojessieluo-svg/civil3dfactory"
+  [string]$Repo = "7pka111223-jpg/C3D"
 )
 $ErrorActionPreference = 'Stop'
 try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch { }

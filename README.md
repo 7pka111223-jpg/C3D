@@ -61,7 +61,7 @@ Read https://github.com/7pka111223-jpg/C3D/blob/HEAD/SKILL.md and set it up.
 2. Install the [.NET 8 SDK](https://dotnet.microsoft.com/download) (add the .NET 10 SDK for Civil 3D 2027), `git clone https://github.com/7pka111223-jpg/C3D.git civil3dfactory`,
    and run `powershell -ExecutionPolicy Bypass -File civil3dfactory\install.ps1 -Build`. This repository publishes no release yet, so `-Build` compiles the engine
    from this source instead of downloading a prebuilt one; it then installs the skills into your AI agents' skill folders and runs a read-only self-check.
-   The two exe tools (`DWGAttributeEditor.exe`, `DWGTitleblockPlotter.exe`) are not built by `-Build`: add `-BuildTools` (needs Python 3.10+) if you need the plot skill.
+   The exe tools are not built by `-Build`: add `-BuildTools` for `PktForge.exe` (pkt skill, .NET SDK) and `DWGAttributeEditor.exe` / `DWGTitleblockPlotter.exe` (plot skill, Python 3.10+).
 3. Restart Civil 3D once if it was open.
 
 ## Requirements
